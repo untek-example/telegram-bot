@@ -11,29 +11,35 @@ require __DIR__ . '/../vendor/autoload.php';
 
 $input = new ArgvInput();
 $mode = $input->getParameterOption('--mode', 'main');
+$projectDirectory = realpath(__DIR__ . '/..');
 $isTest = $mode == 'test';
 
-$projectDirectory = realpath(__DIR__ . '/..');
-(new DotEnvLoader($projectDirectory, 'console', $isTest))->load();
+$context = 'console';
+(new DotEnvLoader($projectDirectory, $context, $isTest))->load();
+
+$env = getenv('APP_ENV');
+$isDebug = getenv('APP_DEBUG');
+$cacheDirectory = getenv('CACHE_DIRECTORY');
+$isImportLocalConfig = getenv('IMPORT_LOCAL_CONFIG');
 
 $configDirectory = new ConfigDirectory($projectDirectory);
 $kernel = new Kernel(
     $configDirectory,
-    getenv('APP_CONTEXT'),
-    getenv('APP_ENV'),
-    getenv('CACHE_DIRECTORY'),
-    getenv('IMPORT_LOCAL_CONFIG'),
-    (bool) getenv('APP_DEBUG'),
+    $context,
+    $env,
+    $cacheDirectory,
+    $isImportLocalConfig,
+    $isDebug,
     $isTest
 );
 
 $cliKernel = new CliKernel(
     $kernel,
-    getenv('APP_CONTEXT'),
-    getenv('APP_ENV'),
-    getenv('CACHE_DIRECTORY'),
-    getenv('IMPORT_LOCAL_CONFIG'),
-    (bool) getenv('APP_DEBUG'),
+    $context,
+    $env,
+    $cacheDirectory,
+    $isImportLocalConfig,
+    $isDebug,
     $isTest
 );
 
