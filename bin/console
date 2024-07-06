@@ -1,0 +1,41 @@
+#!/usr/bin/env php
+<?php
+
+use Forecast\Map\Shared\Infrastructure\Bootstrap\Kernel;
+use Symfony\Component\Console\Input\ArgvInput;
+use Untek\Core\App\Bootstrap\ConfigDirectory;
+use Untek\Core\App\Bootstrap\DotEnvLoader;
+use Untek\Framework\Console\Infrastructure\Cli\Server\CliKernel;
+
+require __DIR__ . '/../vendor/autoload.php';
+
+$input = new ArgvInput();
+$mode = $input->getParameterOption('--mode', 'main');
+$isTest = $mode == 'test';
+
+$projectDirectory = realpath(__DIR__ . '/..');
+(new DotEnvLoader($projectDirectory, 'console', $isTest))->load();
+
+$configDirectory = new ConfigDirectory($projectDirectory);
+$kernel = new Kernel(
+    $configDirectory,
+    getenv('APP_CONTEXT'),
+    getenv('APP_ENV'),
+    getenv('CACHE_DIRECTORY'),
+    getenv('IMPORT_LOCAL_CONFIG'),
+    (bool) getenv('APP_DEBUG'),
+    $isTest
+);
+
+$cliKernel = new CliKernel(
+    $kernel,
+    getenv('APP_CONTEXT'),
+    getenv('APP_ENV'),
+    getenv('CACHE_DIRECTORY'),
+    getenv('IMPORT_LOCAL_CONFIG'),
+    (bool) getenv('APP_DEBUG'),
+    $isTest
+);
+
+$application = $cliKernel->getApplication();
+$application->run($input);
