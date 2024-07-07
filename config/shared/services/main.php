@@ -21,16 +21,16 @@ return static function (ContainerConfigurator $configurator): void {
         ->factory([ContainerFactory::class, 'create'])
         ->public();
 
-    $isTest = getenv('APP_ENV') === 'test';
+    /*$isTest = getenv('APP_ENV') === 'test';
     if ($isTest) {
         $services->set(AdapterInterface::class, ArrayAdapter::class);
     } else {
         $services->set(CacheFactory::class, CacheFactory::class);
         $services->set(AdapterInterface::class)
             ->factory([service(CacheFactory::class), 'create']);
-    }
+    }*/
 
-    $services->set(TranslatorInterface::class, Translator::class)
+    /*$services->set(TranslatorInterface::class, Translator::class)
         ->args([
             'en_US',
         ]);
@@ -38,5 +38,5 @@ return static function (ContainerConfigurator $configurator): void {
     $services->set(RelationLoader::class, RelationLoader::class)
         ->args([
             service(ContainerInterface::class),
-        ]);
+        ]);*/
 };
