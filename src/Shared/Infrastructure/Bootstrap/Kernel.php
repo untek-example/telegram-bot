@@ -1,6 +1,6 @@
 <?php
 
-namespace Forecast\Map\Shared\Infrastructure\Bootstrap;
+namespace Untek\Example\TelegramBot\Shared\Infrastructure\Bootstrap;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\EventDispatcher\DependencyInjection\RegisterListenersPass;

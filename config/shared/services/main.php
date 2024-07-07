@@ -1,6 +1,5 @@
 <?php
 
-use Forecast\Map\Packages\Component\Translator\Infrastructure\DependencyInjection\TranslatorFactory;
 use Psr\Container\ContainerInterface;
 use Symfony\Component\Cache\Adapter\AdapterInterface;
 use Symfony\Component\Cache\Adapter\ArrayAdapter;
