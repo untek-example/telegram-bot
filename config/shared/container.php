@@ -3,6 +3,8 @@
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
+use Symfony\Component\EventDispatcher\DependencyInjection\RegisterListenersPass;
+use Untek\Model\Cqrs\Infrastructure\DependencyInjection\CqrsPass;
 
 /**
  * @var ContainerBuilder $containerBuilder
@@ -10,6 +12,9 @@ use Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
 
 $fileLocator = new FileLocator(__DIR__);
 $loader = new PhpFileLoader($containerBuilder, $fileLocator);
+
+$containerBuilder->addCompilerPass(new CqrsPass());
+$containerBuilder->addCompilerPass(new RegisterListenersPass());
 
 $loader->load(__DIR__ . '/services/main.php');
 

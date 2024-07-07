@@ -3590,12 +3590,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/untek-core/app.git",
-                "reference": "b0e30f08eced0b316a5fe98e6ef0dec002d82a38"
+                "reference": "4a4dbb12c6ffdb3998264f7a2cbc958043bea611"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/untek-core/app/zipball/b0e30f08eced0b316a5fe98e6ef0dec002d82a38",
-                "reference": "b0e30f08eced0b316a5fe98e6ef0dec002d82a38",
+                "url": "https://api.github.com/repos/untek-core/app/zipball/4a4dbb12c6ffdb3998264f7a2cbc958043bea611",
+                "reference": "4a4dbb12c6ffdb3998264f7a2cbc958043bea611",
                 "shasum": ""
             },
             "require": {
@@ -3623,7 +3623,7 @@
                 "issues": "https://github.com/untek-core/app/issues",
                 "source": "https://github.com/untek-core/app/tree/0.1.x"
             },
-            "time": "2024-07-07T13:56:11+00:00"
+            "time": "2024-07-07T15:57:38+00:00"
         },
         {
             "name": "untek-core/argument-resolver",
@@ -4464,12 +4464,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/untek-model/cqrs.git",
-                "reference": "aceaaf559d5d093f1a892c938189f6d7d5764857"
+                "reference": "2863588f4b20767dbe34c9cfa2bc8ac65e7f2d31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/untek-model/cqrs/zipball/aceaaf559d5d093f1a892c938189f6d7d5764857",
-                "reference": "aceaaf559d5d093f1a892c938189f6d7d5764857",
+                "url": "https://api.github.com/repos/untek-model/cqrs/zipball/2863588f4b20767dbe34c9cfa2bc8ac65e7f2d31",
+                "reference": "2863588f4b20767dbe34c9cfa2bc8ac65e7f2d31",
                 "shasum": ""
             },
             "type": "extension",
@@ -4494,7 +4494,7 @@
                 "issues": "https://github.com/untek-model/cqrs/issues",
                 "source": "https://github.com/untek-model/cqrs/tree/0.1.x"
             },
-            "time": "2024-03-24T14:25:45+00:00"
+            "time": "2024-07-07T15:57:23+00:00"
         },
         {
             "name": "untek-model/data-provider",
@@ -4997,12 +4997,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/untek-utility/init.git",
-                "reference": "07c53c3bb2dc3ad0e11ec0cbcfe5a0d4aa2cad23"
+                "reference": "94fae5f5ce8da0837b22a463637cf28ba1a2206e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/untek-utility/init/zipball/07c53c3bb2dc3ad0e11ec0cbcfe5a0d4aa2cad23",
-                "reference": "07c53c3bb2dc3ad0e11ec0cbcfe5a0d4aa2cad23",
+                "url": "https://api.github.com/repos/untek-utility/init/zipball/94fae5f5ce8da0837b22a463637cf28ba1a2206e",
+                "reference": "94fae5f5ce8da0837b22a463637cf28ba1a2206e",
                 "shasum": ""
             },
             "type": "extension",
@@ -5027,7 +5027,7 @@
                 "issues": "https://github.com/untek-utility/init/issues",
                 "source": "https://github.com/untek-utility/init/tree/0.1.x"
             },
-            "time": "2024-07-07T13:55:52+00:00"
+            "time": "2024-07-07T15:57:33+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -5349,12 +5349,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/untek-develop/package.git",
-                "reference": "d9afd5aa0c124e4f3d96687435da379371f080ac"
+                "reference": "28964bb5b60dfa408f8c2b27d4dfa844c16496d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/untek-develop/package/zipball/d9afd5aa0c124e4f3d96687435da379371f080ac",
-                "reference": "d9afd5aa0c124e4f3d96687435da379371f080ac",
+                "url": "https://api.github.com/repos/untek-develop/package/zipball/28964bb5b60dfa408f8c2b27d4dfa844c16496d5",
+                "reference": "28964bb5b60dfa408f8c2b27d4dfa844c16496d5",
                 "shasum": ""
             },
             "require": {
@@ -5384,7 +5384,7 @@
                 "issues": "https://github.com/untek-develop/package/issues",
                 "source": "https://github.com/untek-develop/package/tree/0.1.x"
             },
-            "time": "2024-07-07T13:55:47+00:00"
+            "time": "2024-07-07T15:57:28+00:00"
         }
     ],
     "aliases": [],
