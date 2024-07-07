@@ -17,7 +17,4 @@ $loader->load(__DIR__ . '/services/telegram.php');
 // Console framework
 $loader->load(__DIR__ . '/../../vendor/untek-framework/console/src/resources/config/services/main.php');
 
-// Init utility
-$loader->load(__DIR__ . '/../../vendor/untek-utility/init/src/resources/config/services/package.php');
-
 $loader->load(__DIR__ . '/../../vendor/untek-framework/telegram/src/resources/config/services/console.php');

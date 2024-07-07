@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-use Untek\Example\TelegramBot\Shared\Infrastructure\Bootstrap\Kernel;
+use Forecast\Map\Shared\Infrastructure\Bootstrap\Kernel;
 use Symfony\Component\Console\Input\ArgvInput;
 use Untek\Core\App\Bootstrap\ConfigDirectory;
 use Untek\Core\App\Bootstrap\DotEnvLoader;
@@ -12,6 +12,7 @@ require __DIR__ . '/../vendor/autoload.php';
 $input = new ArgvInput();
 $mode = $input->getParameterOption('--mode', 'main');
 $projectDirectory = realpath(__DIR__ . '/..');
+$configDir = $projectDirectory . '/config';
 $isTest = $mode == 'test';
 
 $context = 'console';
@@ -22,7 +23,7 @@ $isDebug = getenv('APP_DEBUG');
 $cacheDirectory = getenv('CACHE_DIRECTORY');
 $isImportLocalConfig = getenv('IMPORT_LOCAL_CONFIG');
 
-$configDirectory = new ConfigDirectory($projectDirectory);
+$configDirectory = new ConfigDirectory($configDir);
 $kernel = new Kernel(
     $configDirectory,
     $context,
