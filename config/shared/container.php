@@ -21,20 +21,7 @@ $loader->load(__DIR__ . '/../../vendor/untek-core/kernel/src/resources/config/se
 // CQRS
 $loader->load(__DIR__ . '/../../vendor/untek-model/cqrs/src/resources/config/services/main.php');
 
-// Model
-//$loader->load(__DIR__ . '/../../vendor/untek-model/entity-manager/src/resources/config/services/entity-manager.php');
-
-// Validator
-//$loader->load(__DIR__ . '/../../vendor/untek-model/validator/src/resources/config/services/validator.php');
-
 // Logger
 $loader->load(__DIR__ . '/services/log.php');
-
-// Database
-//$loader->load(__DIR__ . '/../../vendor/untek-sandbox/common/src/Database/Doctrine/resources/config/services/main.php');
-//$loader->load(__DIR__ . '/../../vendor/untek-sandbox/common/src/Database/Eloquent/resources/config/services/main.php');
-
-// Translate
-//$loader->load(__DIR__ . '/../../vendor/untek-component/translation/src/resources/config/services/main.php');
 
 $loader->load(__DIR__ . '/../../vendor/untek-framework/telegram/src/resources/config/services/main.php');

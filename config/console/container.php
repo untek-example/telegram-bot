@@ -20,13 +20,4 @@ $loader->load(__DIR__ . '/../../vendor/untek-framework/console/src/resources/con
 // Init utility
 $loader->load(__DIR__ . '/../../vendor/untek-utility/init/src/resources/config/services/package.php');
 
-// Database
-//$loader->load(__DIR__ . '/../../vendor/untek-sandbox/common/src/Database/Migration/resources/config/services/main.php');
-//$loader->load(__DIR__ . '/../../vendor/untek-sandbox/common/src/Database/Migration/resources/config/services/console.php');
-//$loader->load(__DIR__ . '/../../vendor/untek-sandbox/common/src/Database/Seed/resources/config/services/main.php');
-//$loader->load(__DIR__ . '/../../vendor/untek-sandbox/common/src/Database/Seed/resources/config/services/console.php');
-
-// Package utility
-//$loader->load(__DIR__ . '/../../vendor/untek-develop/package/src/resources/config/services/package.php');
-
 $loader->load(__DIR__ . '/../../vendor/untek-framework/telegram/src/resources/config/services/console.php');
